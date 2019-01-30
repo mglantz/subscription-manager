@@ -244,7 +244,7 @@ void testInstallingCompressedProductCert(productFixture *fixture, gconstpointer 
     int ret = installProductId(fixture->repoProductId, fixture->productDb, "./");
     g_object_unref(fixture->repoProductId->repo);
     g_object_unref(dnfContext);
-    g_assert_cmpint(ret, ==, 1);
+    g_assert_cmpint(ret, ==, 0);
 }
 
 void testFetchingProductId(productFixture *fixture, gconstpointer testData) {
@@ -375,7 +375,6 @@ void testInstalledPackages(installedPackageFixture *fixture, gconstpointer testD
     GPtrArray *installedPackages = getInstalledPackages(fixture->rpmDbSack);
     // We expect that the length of the list will be bigger than zero :-)
     g_assert_cmpint(installedPackages->len, >, 0);
-    g_object_unref(installedPackages);
 }
 
 typedef struct {
