@@ -17,3 +17,5 @@ mock
 Sphinx
 git+https://github.com/alikins/pyqver.git#egg=pyqver
 git+https://github.com/awood/nose-xvfb.git#egg=nose-xvfb
+requests>=2.32.4 # not directly required, pinned by Snyk to avoid a vulnerability
+urllib3>=2.5.0 # not directly required, pinned by Snyk to avoid a vulnerability
